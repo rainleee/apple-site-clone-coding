@@ -4,53 +4,532 @@
 
 /** Ultra Light */
 @font-face {
-    font-family: "San Francisco";
-    font-weight: 100;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
-  }
-  
-  /** Thin */
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 200;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
-  }
-  
-  /** Regular */
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 400;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-  }
-  
-  /** Medium */
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 500;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
-  }
-  
-  /** Semi Bold */
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 600;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
-  }
-  
-  /** Bold */ 
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 700;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
-  }
-  
-  * {
-      font-family: "San Francisco"   
-  }
-  
-  h1 { font-weight: 700; }
-  h2 { font-weight: 600; }
-  h3 { font-weight: 500; }
-  p { font-weight: 400; }
-  p.thin { font-weight: 200; }
-  p.ultralight { font-weight: 100; }
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+* {
+  font-family: "San Francisco";
+}
+
+h1 {
+  font-weight: 700;
+}
+h2 {
+  font-weight: 600;
+}
+h3 {
+  font-weight: 500;
+}
+p {
+  font-weight: 400;
+}
+p.thin {
+  font-weight: 200;
+}
+p.ultralight {
+  font-weight: 100;
+}
+h1.title-black {
+  color: black;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 500;
+}
+h1.title-white {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 500;
+}
+p.discription-black {
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+}
+p.discription-white {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+button.preview-btn {
+  width: 11rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  border: solid black 2px;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+body {
+  background-color: black;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 1px;
+}
+body::-webkit-scrollbar-thumb {
+  opacity: 0.5;
+  background-color: grey;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  opacity: 1;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  height: 3rem;
+  background-color: black;
+  opacity: 0.9;
+}
+
+header .apple-logo {
+  position: absolute;
+  top: 0;
+  left: 15vw;
+  cursor: pointer;
+}
+header .store {
+  position: absolute;
+  top: 0;
+  left: 19vw;
+  cursor: pointer;
+}
+header .mac {
+  position: absolute;
+  top: 0;
+  left: 24vw;
+  cursor: pointer;
+}
+header .ipad {
+  position: absolute;
+  top: 0;
+  left: 29vw;
+  cursor: pointer;
+}
+header .iphone {
+  position: absolute;
+  top: 0;
+  left: 34vw;
+  cursor: pointer;
+}
+header .watch {
+  position: absolute;
+  top: 0;
+  left: 39.5vw;
+  cursor: pointer;
+}
+header .airpods {
+  position: absolute;
+  top: 0;
+  left: 45vw;
+  cursor: pointer;
+}
+header .tv-and-home {
+  position: absolute;
+  top: 0;
+  left: 50.5vw;
+  cursor: pointer;
+}
+header .only-apple {
+  position: absolute;
+  top: 0;
+  left: 58vw;
+  cursor: pointer;
+}
+header .accessories {
+  position: absolute;
+  top: 0;
+  left: 67vw;
+  cursor: pointer;
+}
+header .support {
+  position: absolute;
+  top: 0;
+  left: 75vw;
+  cursor: pointer;
+}
+header .search {
+  position: absolute;
+  top: 0;
+  left: 81vw;
+  cursor: pointer;
+}
+header .bag {
+  position: absolute;
+  top: 0;
+  left: 85vw;
+  cursor: pointer;
+}
+.content {
+  position: relative;
+}
+section {
+  color: white;
+}
+.content .wwdc {
+  position: absolute;
+  top: 2rem;
+  left: 13rem;
+}
+.content .wwdc .wwdc22 {
+  position: absolute;
+  top: 37rem;
+  left: 17rem;
+  width: 25rem;
+  object-fit: scale-down;
+}
+.content .wwdc .discription-wwdc {
+  position: absolute;
+  top: 44rem;
+  left: 9.2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #bfe3e7;
+}
+.content .wwdc .watch-btn {
+  position: absolute;
+  top: 59rem;
+  left: 22rem;
+  background-color: black;
+  border: solid #bfe3e7 2.5px;
+  border-radius: 5rem;
+  color: #bfe3e7;
+  font-size: 1.3rem;
+  width: 15rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.content .macbook-air {
+  position: absolute;
+  top: 78rem;
+  width: 100vw;
+  height: 200vh;
+  background-color: white;
+}
+.content .macbook-air .title-black {
+  position: relative;
+  top: 4rem;
+}
+.content .macbook-air .air-image {
+  position: relative;
+  top: 5rem;
+  left: 22.5rem;
+  width: auto;
+  max-height: 80rem;
+}
+.content .macbook-air .discription-black {
+  position: relative;
+  top: 6rem;
+}
+.content .macbook-air .m2-chip-description {
+  position: relative;
+  top: 6.5rem;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 550;
+  text-align: center;
+}
+.content .macbook-air .m2-chip-image__black {
+  position: relative;
+  top: 6rem;
+  left: 43.3rem;
+  width: auto;
+  max-height: 3.3rem;
+}
+.content .macbook-air .m2-chip-description__grey {
+  position: relative;
+  top: 6rem;
+  text-align: center;
+  color: #87868b;
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+.content .macbook-air .learn-and-view {
+  position: relative;
+  top: 6rem;
+  text-align: center;
+}
+.content .macbook-air .learn-and-view .learn-btn {
+  background-color: white;
+  border: solid black 2px;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1rem;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+.content .macbook-air .learn-and-view .view-btn {
+  background-color: white;
+  border: solid black 2px;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.content .ios {
+  position: absolute;
+  top: 173rem;
+  width: 100%;
+  background-color: #f5f5f7;
+  height: 70rem;
+}
+.content .ios .title-black {
+  background-image: url(../image/ios16__dcfvpgo5ufgy_large.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* width: auto; */
+  height: 40rem;
+}
+.content .ios .discription-black {
+  background-color: #f5f5f7;
+}
+.content .ios .preview-btn {
+  position: absolute;
+  left: 38rem;
+  background-color: #f5f5f7;
+}
+.content .macos {
+  position: absolute;
+  top: 240rem;
+  width: 100%;
+  height: 70rem;
+  background-color: #f5f5f7;
+}
+.content .macos .macos-image {
+  margin-left: 6vw;
+}
+.content .macos .discription-black {
+  margin-top: 3rem;
+}
+.content .macos .preview-btn {
+  position: relative;
+  left: 39rem;
+  background-color: #f5f5f7;
+  margin-top: 1rem;
+}
+.content .ipad-os {
+  position: absolute;
+  top: 310rem;
+  width: 100%;
+  height: 70rem;
+  background-color: #f5f5f7;
+}
+.content .ipad-os .title-black {
+  background-image: url("../image/ipados__efgf02u69b0i_large.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 149%;
+  height: 50rem;
+}
+.content .ipad-os .discription-black {
+  position: absolute;
+  top: 47rem;
+  left: 27rem;
+}
+.content .ipad-os .preview-btn {
+  position: relative;
+  left: 39rem;
+  background-color: #f5f5f7;
+  margin-top: 4rem;
+}
+.content .watch-os {
+  position: absolute;
+  top: 380rem;
+  width: 100%;
+  height: 65rem;
+  background-color: #f5f5f7;
+}
+.content .watch-os .title-black {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  left: 35.5rem;
+}
+.content .watch-os .watchos-image {
+  width: 100%;
+  position: absolute;
+  top: 6.5rem;
+}
+.content .watch-os .discription-black {
+  position: absolute;
+  top: 42rem;
+  left: 27rem;
+}
+.content .watch-os .preview-btn {
+  position: absolute;
+  left: 39rem;
+  top: 53rem;
+  background-color: #f5f5f7;
+}
+.content .macbook-pro {
+  position: absolute;
+  top: 450rem;
+  width: 100%;
+  height: 70rem;
+}
+.content .macbook-pro .discription-white {
+  position: absolute;
+  top: 38rem;
+  left: 28.5rem;
+}
+.content .macbook-pro .m2-chip-description {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 550;
+  text-align: center;
+}
+.content .macbook-pro .m2-chip-color {
+  position: absolute;
+  top: 53.5rem;
+  left: 42rem;
+}
+.content .macbook-pro .m2-chip-description__grey {
+  position: relative;
+  top: 6rem;
+  text-align: center;
+  color: #87868b;
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+.content .macbook-pro .learn-and-view {
+  position: relative;
+  top: 6rem;
+  text-align: center;
+}
+.content .macbook-pro .learn-and-view .learn-btn {
+  background-color: black;
+  border: solid white 2px;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1rem;
+  margin-right: 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+.content .macbook-pro .learn-and-view .view-btn {
+  background-color: black;
+  border: solid white 2px;
+  border-radius: 2rem;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+footer {
+  position: absolute;
+  top: 525rem;
+  color: white;
+  width: 100%;
+  background-color: #1d1d20;
+}
+.footer .container {
+  width: 90%;
+}
+.footer .container .notice {
+  margin: 1rem 0 1.5rem 2.5rem;
+  color: #86868b;
+}
+hr {
+  margin-left: 2.5rem;
+  border: solid #86868b 0.2px;
+}
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 1.5rem 0;
+}
+.item__name {
+  font-weight: bold;
+}
+.inner {
+  list-style: none;
+  padding-left: 0;
+}
+.inner .inner-menu {
+  margin: 0.6rem 0;
+  cursor: pointer;
+}
+.inner .inner-menu:hover {
+  text-decoration: underline;
+}
+.inner .inner-menu__item-menu {
+  font-weight: bold;
+}
+.store-info {
+  display: flex;
+  margin-left: 2.5rem;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.copyright-wrapper {
+  display: flex;
+  margin: 1rem 0 2rem 2.5rem;
+  justify-content: space-between;
+}
+.copyright-wrapper .copyright {
+  color: #86868b;
+}
+.copyright-wrapper .other-info {
+  display: flex;
+  justify-content: space-between;
+}
+.copyright-wrapper .other-info .other-info__item {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.copyright-wrapper .other-info .other-info__item:hover {
+  text-decoration: underline;
+}
+.copyright-wrapper .other-info .vertical-line {
+  width: 1px;
+  background-color: white;
+  height: 100%;
+  float: left;
+}
