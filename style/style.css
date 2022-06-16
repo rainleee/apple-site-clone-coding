@@ -2,55 +2,506 @@
  * http://applemusic.tumblr.com/
  */
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+출처: https://parkjh7764.tistory.com/80 [HwanE Develop Blog:티스토리]
 /** Ultra Light */
 @font-face {
-    font-family: "San Francisco";
-    font-weight: 100;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
-  }
-  
-  /** Thin */
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 200;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
-  }
-  
-  /** Regular */
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 400;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-  }
-  
-  /** Medium */
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 500;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
-  }
-  
-  /** Semi Bold */
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 600;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
-  }
-  
-  /** Bold */ 
-  @font-face {
-    font-family: "San Francisco";
-    font-weight: 700;
-    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
-  }
-  
-  * {
-      font-family: "San Francisco"   
-  }
-  
-  h1 { font-weight: 700; }
-  h2 { font-weight: 600; }
-  h3 { font-weight: 500; }
-  p { font-weight: 400; }
-  p.thin { font-weight: 200; }
-  p.ultralight { font-weight: 100; }
+	font-family: "San Francisco";
+	font-weight: 100;
+	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+	font-family: "San Francisco";
+	font-weight: 200;
+	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+	font-family: "San Francisco";
+	font-weight: 400;
+	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+	font-family: "San Francisco";
+	font-weight: 500;
+	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+	font-family: "San Francisco";
+	font-weight: 600;
+	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */
+@font-face {
+	font-family: "San Francisco";
+	font-weight: 700;
+	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+
+* {
+	font-family: "San Francisco";
+	box-sizing: border-box;
+}
+
+h1 {
+	font-weight: 700;
+}
+h2 {
+	font-weight: 600;
+}
+h3 {
+	font-weight: 500;
+}
+p {
+	font-weight: 400;
+}
+p.thin {
+	font-weight: 200;
+}
+p.ultralight {
+	font-weight: 100;
+}
+
+.global-nav {
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 9999;
+	display: block;
+	margin: 0;
+	width: 100%;
+	min-width: 1024px;
+	height: 48px;
+	max-height: 44px;
+	font-size: 12px;
+	background: rgba(0, 0, 0, 0.8);
+}
+.global-nav-content {
+	margin: 0 auto;
+	max-width: 980px;
+	padding: 0 22px;
+	z-index: 2;
+}
+.global-nav-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.global-nav-item {
+	display: inline-block;
+	position: relative;
+	height: 44px;
+	z-index: 1;
+	vertical-align: top;
+}
+.global-nav-link {
+	font-weight: 400;
+	color: #f5f5f7;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	padding: 0 8px;
+	height: 44px;
+	opacity: 0.8;
+	white-space: nowrap;
+}
+
+.global-nav-item-text {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
+	top: 50%;
+}
+
+.global-nav-item-apple {
+	background-size: 14px 44px;
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_apple_image__b5er5ngrzxqq_large.svg);
+	background-position: center center;
+	width: 14px;
+}
+
+.global-nav-item-store {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_store_image__c7jy08initqq_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 30px;
+}
+
+.global-nav-item-mac {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_mac_image__dazlko3t9a6a_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 23px;
+}
+.global-nav-item-ipad {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_ipad_image__fw9qyj9lloi2_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 24px;
+}
+.global-nav-item-iphone {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_iphone_image__ko7x4isga4ia_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 38px;
+}
+.global-nav-item-watch {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_watch_image__gkoblojrlsqe_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 35px;
+}
+.global-nav-item-airpods {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_airpods_image__f969s84ivmaa_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 43px;
+}
+.global-nav-item-tvhome {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_tvhome_image__zb2ewyxbi6ae_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 65px;
+}
+.global-nav-item-onlyonapple {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_onlyonapple_image__c4t8k97tougm_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 80px;
+}
+.global-nav-item-accessories {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_accessories_image__edj0wqmfwxyu_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 67px;
+}
+.global-nav-item-support {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_links_support_image__bw9kctll7u3m_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 44px;
+}
+.global-nav-item-search {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_search_image__cbllq1gkias2_large.svg);
+	background-position: -3px -2px;
+	background-origin: content-box;
+	background-size: cover;
+	width: 32px;
+}
+
+.global-nav-item-bag {
+	background-repeat: no-repeat;
+	background-image: url(../image/globalnav_bag_image__yzte50i47ciu_large.svg);
+	background-position: center center;
+	background-origin: content-box;
+	background-size: cover;
+	width: 13px;
+}
+
+footer {
+	font-size: 12px;
+	font-weight: 400;
+	background: #1d1d1f;
+	color: #f5f5f7;
+	min-width: 1024px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.footer-content {
+	margin: 0 auto;
+	max-width: 980px;
+	padding: 0 22px;
+}
+
+.footer-notes {
+	border-bottom: 1px solid #424245;
+	padding: 17px 0 11px;
+}
+.footer-notes li {
+	padding-bottom: 10px;
+	color: #717175;
+}
+.footer-nav {
+	font-size: 12px;
+	font-weight: 400;
+	display: flex;
+	flex-wrap: nowrap;
+	padding-top: 20px;
+}
+.footer-nav-column {
+	flex-basis: 20%;
+}
+.footer-nav-column-section {
+	padding-top: 24px;
+}
+.footer-nav-column-section:nth-child(1) {
+	padding-top: 0;
+}
+.footer-nav-column-section h3 {
+	font-weight: 600;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	color: #f5f5f7;
+}
+
+.footer-nav-column-section ul {
+	margin-right: 20px;
+	padding: 0;
+}
+.footer-nav-column-section ul li {
+	margin-bottom: 10px;
+}
+
+.footer-nav-column-section ul li a {
+	margin-bottom: 10px;
+	color: #b3b3b7;
+}
+.global-footer {
+	padding-top: 34px;
+}
+.global-footer-shop {
+	margin-bottom: 7px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #424245;
+	color: #7e7e83;
+}
+.global-footer-region {
+	float: right;
+	margin-top: 5px;
+	position: relative;
+	top: -3px;
+	z-index: 2;
+}
+.global-footer-region a {
+	color: #a4a4a8;
+}
+.global-footer-sign {
+	position: relative;
+	top: -3px;
+	z-index: 1;
+}
+.global-footer-sign-copyright {
+	margin-right: 30px;
+	float: left;
+	margin-top: 5px;
+	color: #7e7e83;
+}
+.global-footer-sign-links {
+	margin-right: 30px;
+	float: left;
+	margin-top: 5px;
+	position: relative;
+	top: -5px;
+}
+.global-footer-sign-links a {
+	border-right: 1px solid #424245;
+	margin-right: 7px;
+	padding-right: 10px;
+	display: inline-block;
+	margin-top: 5px;
+	color: #cbcbd0;
+}
+.global-footer-sign-links a:last-child {
+	border-right: none;
+}
+.homepage-section-wwdc22 {
+	padding-top: 44px;
+	width: 100%;
+	height: 100%;
+}
+.wwdc22-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(0deg, #000000, #010e1e);
+}
+.wwdc22-logo {
+	position: absolute;
+	top: 75%;
+}
+.wwdc22-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #c6e1e5;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 2rem;
+	margin-bottom: 40px;
+}
+.wwdc22-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 40px;
+	border: 1px solid #c6e1e5;
+	border-radius: 20px;
+	font-size: 18px;
+	color: #c6e1e5;
+	margin-bottom: 200px;
+}
